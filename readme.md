@@ -2,6 +2,11 @@
 
 Example of a simple implementation to build a ratings api on top of Redis
 
+#### Related repositories
+
+- [Favorites API](https://github.com/Eyevinn/favorites-api)
+- [Continue Watching API](https://github.com/Eyevinn/continue-watching-api)
+
 ## Requirements
 
 - nodejs v10+
