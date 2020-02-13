@@ -1,0 +1,11 @@
+### insert data
+
+POST http://localhost:3000/ratings/asset123/4
+###
+POST http://localhost:3000/ratings/asset123/5
+###
+POST http://localhost:3000/ratings/asset123/4
+
+### successfull fetch
+
+GET http://localhost:3000/ratings/asset123
