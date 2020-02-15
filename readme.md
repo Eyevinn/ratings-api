@@ -6,6 +6,7 @@ Example of a simple implementation to build a ratings api on top of Redis
 
 - [Favorites API](https://github.com/Eyevinn/favorites-api)
 - [Continue Watching API](https://github.com/Eyevinn/continue-watching-api)
+- [Stream Limit API](https://github.com/Eyevinn/stream-limit-api)
 
 ## Requirements
 
