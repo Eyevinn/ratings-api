@@ -7,10 +7,7 @@ module.exports = (fastify, opts, next) => {
     if (!assetId || !rating) return res.code(500).send();
 
     const store = await ratingsRepository.add(assetId, rating);
-    res
-      .header("Cache-Control", "public, no-cache")
-      .code(200)
-      .send(store);
+    res.header("Cache-Control", "public, no-cache").code(200).send(store);
   });
 
   fastify.get("/:assetId", async (req, res) => {
@@ -20,10 +17,7 @@ module.exports = (fastify, opts, next) => {
     }
 
     const rating = await ratingsRepository.get(assetId);
-    res
-      .header("Cache-Control", "public, no-cache")
-      .code(200)
-      .send(rating);
+    res.header("Cache-Control", "public, no-cache").code(200).send(rating);
   });
 
   next();

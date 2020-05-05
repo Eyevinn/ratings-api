@@ -4,7 +4,7 @@ const logger = require("./src/helpers/logHelper");
 const port = process.env.PORT || 3000;
 
 /** Start the server */
-server.listen(port, "0.0.0.0", err => {
+server.listen(port, "0.0.0.0", (err) => {
   if (err) {
     throw err;
   }

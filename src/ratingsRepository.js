@@ -9,7 +9,7 @@ const add = async (assetId, rating) => {
   return true;
 };
 
-const get = async assetId => {
+const get = async (assetId) => {
   const key = generateKey(KEY_PREFIX, assetId);
   const ratings = await redisClient.lrange(key, 0, -1);
   const sum = ratings.reduce((a, b) => Number(a) + Number(b), 0);
@@ -17,7 +17,7 @@ const get = async assetId => {
   return average.toFixed(2);
 };
 
-const amount = async assetId => {
+const amount = async (assetId) => {
   const key = generateKey(KEY_PREFIX, assetId);
   const ratingsList = await redisClient.lrange(key, 0, -1);
   return ratingsList.length;
@@ -26,5 +26,5 @@ const amount = async assetId => {
 module.exports = {
   add,
   get,
-  amount
+  amount,
 };

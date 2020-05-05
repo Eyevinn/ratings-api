@@ -1,5 +1,5 @@
 const fastify = require("fastify")({
-  ignoreTrailingSlash: true
+  ignoreTrailingSlash: true,
 });
 const cors = require("cors");
 fastify.use(cors());
@@ -7,11 +7,11 @@ fastify.use(cors());
 const fastifyRateLimit = require("fastify-rate-limit");
 fastify.register(fastifyRateLimit, {
   max: 25,
-  timeWindow: "1 minute"
+  timeWindow: "1 minute",
 });
 
 fastify.register(require("./routes"), {
-  prefix: "/ratings"
+  prefix: "/ratings",
 });
 
 module.exports = fastify;
